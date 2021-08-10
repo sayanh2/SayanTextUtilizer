@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Text Utilizer</title>
+  </head>
+  <body>
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">TextUtils</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">About Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+       <form class="d-flex">
+        <input class="form-control mx-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+</nav>
+   <div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Welcome to TextUtils!</strong> You can do anything with your text here!
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">×</span>
+  </button>
+    </div>
+
+
+   <div class="container">
+       <h1 class="text-success my-4">Welcome to Text Analyzer, Enter some text below: </h1>
+
+       <form action='/analyzer' method="post"> {% csrf_token %}
+
+    <div class="mb-3 form-group">
+      <label for="exampleFormControlTextarea1" class="form-label">Enter some text here</label>
+      <textarea class="form-control" name="text" id="exampleFormControlTextarea1" rows="8"></textarea>
+    </div>
+
+       <div class="custom-control custom-switch">
+        <input type="checkbox" name="removepunc" class="custom-control-input" id="customSwitch1">
+        <label class="custom-control-label" for="customSwitch1">Remove Punctuations</label>
+        </div>
+       <div class="custom-control custom-switch">
+        <input type="checkbox" name="uppercase" class="custom-control-input" id="customSwitch2">
+        <label class="custom-control-label" for="customSwitch2">UPPERCASE</label>
+        </div>
+       <div class="custom-control custom-switch">
+        <input type="checkbox" name="newLineRemover" class="custom-control-input" id="customSwitch3">
+        <label class="custom-control-label" for="customSwitch3">New Line Remover</label>
+        </div>
+       <div class="custom-control custom-switch">
+        <input type="checkbox" name="extraSpaceRemover" class="custom-control-input" id="customSwitch4">
+        <label class="custom-control-label" for="customSwitch4">Extra Space Remover</label>
+        </div>
+       <div class="custom-control custom-switch">
+        <input type="checkbox" name="charCounter" class="custom-control-input" id="customSwitch5">
+        <label class="custom-control-label" for="customSwitch5">Character Counter</label>
+        </div>
+
+       <button type="submit" class="btn btn-outline-success my-4">Analyze Text</button>
+
+           </form>
+
+
+
+   </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
